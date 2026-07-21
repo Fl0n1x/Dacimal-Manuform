@@ -9,7 +9,7 @@
         compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";
         /* Якщо діод смужкою вказує на контакти Row (R), то напрямок col2row */
-        diode-direction = "col2row"; 
+        diode-direction = "row2col"; 
 
         row-gpios
             = <&gpio0 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
