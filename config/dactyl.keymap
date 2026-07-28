@@ -7,7 +7,29 @@
 
         default_layer {
             bindings = <
-&kp N2  &kp N3  &kp N3  &kp N3  &kp N3  &kp N3  &kp N1  &kp N2  &kp F  &kp F  &kp F  &kp F  &kp F  &kp N1  &kp N2  &kp F  &kp F  &kp F  &kp F  &kp F  &kp N1  &kp N2  &kp F  &kp F  &kp F  &kp F  &kp F  &kp N1  &kp N2  &kp N4  &kp N4  &kp N4  &kp N4  &kp N4  &kp N1  &kp N2  &kp N3  &kp N3  &kp N3  &kp N3  &kp N3  &kp N1  &kp N2  &kp Q  &kp Q  &kp Q  &kp Q  &kp Q  &kp N1  &kp N2  &kp Q  &kp Q  &kp Q  &kp Q  &kp Q  &kp N1  &kp N2  &kp Q  &kp Q  &kp Q  &kp Q  &kp Q  &kp N1  &kp N2  &kp N4  &kp N4  &kp N4  &kp N4  &kp N4  &kp N1
+// LEFT HALF - Test layout to identify keys
+// Row 0 (top): Q W E R T Y U
+&kp Q       &kp W       &kp E       &kp R       &kp T       &kp Y       &kp U
+// Row 1: A S D F G H J
+&kp A       &kp S       &kp D       &kp F       &kp G       &kp H       &kp J
+// Row 2: Z X C V B N M
+&kp Z       &kp X       &kp C       &kp V       &kp B       &kp N       &kp M
+// Row 3: 1 2 3 4 5 6 7
+&kp N1      &kp N2      &kp N3      &kp N4      &kp N5      &kp N6      &kp N7
+// Row 4 (bottom): 8 9 0 MINUS EQUALS BACKSPACE TAB
+&kp N8      &kp N9      &kp N0      &kp MINUS   &kp EQUALS  &kp BACKSPACE &kp TAB
+
+// RIGHT HALF - Test layout to identify keys  
+// Row 0 (top): I O P LBRACKET RBRACKET BACKSLASH GRAVE
+&kp I       &kp O       &kp P       &kp LBRACKET &kp RBRACKET &kp BACKSLASH &kp GRAVE
+// Row 1: K L SEMICOLON QUOTE DOT COMMA SLASH
+&kp K       &kp L       &kp SEMICOLON &kp QUOTE &kp DOT     &kp COMMA   &kp SLASH
+// Row 2: ENTER SPACE DELETE ESCAPE CAPS LOCK SHIFT CTRL
+&kp ENTER   &kp SPACE   &kp DELETE  &kp ESCAPE  &kp CAPS    &kp LSHIFT  &kp LCTRL
+// Row 3: UP PG_UP DOWN LEFT RIGHT PG_DOWN MO_1
+&kp UP      &kp PG_UP   &kp DOWN    &kp LEFT    &kp RIGHT   &kp PG_DOWN &kp MO_1
+// Row 4 (bottom): MO_2 MO_3 MO_4 MO_5 MO_6 MO_7 MO_8
+&kp MO_2    &kp MO_3    &kp MO_4    &kp MO_5    &kp MO_6    &kp MO_7    &kp MO_8
             >;
         };
     };

@@ -1,0 +1,36 @@
+#include <dt-bindings/zmk/matrix_transform.h>
+
+/ {
+    chosen {
+        zmk,kscan = &kscan0;
+    };
+
+    // Left half: 5 rows x 7 cols matrix, but only 31 keys working
+    // Rows: 0-4, Cols: 0-6
+    // 4 keys in the middle top are not connected (you mentioned this)
+    kscan0: kscan_0 {
+        compatible = "zmk,kscan-gpio-matrix";
+        label = "KSCAN_LEFT";
+        diode-direction = "row2col"; 
+
+        // 5 row pins
+        row-gpios
+            = <&gpio0 6 GPIO_ACTIVE_HIGH>   // Row 0
+            , <&gpio0 8 GPIO_ACTIVE_HIGH>   // Row 1
+            , <&gpio0 17 GPIO_ACTIVE_HIGH>  // Row 2
+            , <&gpio0 20 GPIO_ACTIVE_HIGH>  // Row 3
+            , <&gpio0 22 GPIO_ACTIVE_HIGH>  // Row 4
+            ;
+
+        // 7 column pins
+        col-gpios
+            = <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Col 0
+            , <&gpio1 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   // Col 1
+            , <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Col 2
+            , <&gpio1 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   // Col 3
+            , <&gpio1 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>   // Col 4
+            , <&gpio1 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Col 5
+            , <&gpio1 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // Col 6
+            ;
+    };
+};
